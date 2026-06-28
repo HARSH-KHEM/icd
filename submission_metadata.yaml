@@ -1,4 +1,14 @@
 team_name: HACK-X
-track: Data & AI Challenge
-project_name: ICD (Intelligent Candidate Discovery)
-description: A 4-stage pipeline for parsing, filtering, embedding, and reranking candidates for an AI Engineer role using sentence transformers.
+primary_contact:
+  name: Harsh Khem
+  email: hackarsh08@gmail.com
+github_repo: https://github.com/HARSH-KHEM/icd
+sandbox_link: https://icd-redrob.streamlit.app
+reproduce_command: python rank.py --candidates ./data/candidates.jsonl --out ./submission.csv
+compute_platform: MacBook Pro, 8 cores, 16GB RAM, Python 3.9, macOS
+ai_tools_used: Claude, Gemini
+methodology_summary: 4-stage CPU-only pipeline — rule-based filter (100K→1638), SBERT semantic scoring (→300), multi-signal reranking using experience/behavioral/context scores (→100), rule-based reasoning generation. Runs in ~15 seconds on CPU.
+declarations:
+  original_work: true
+  terms_accepted: true
+  honeypot_check_done: false
