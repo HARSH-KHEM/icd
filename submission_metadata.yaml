@@ -1,0 +1,4 @@
+team_name: HACK-X
+track: Data & AI Challenge
+project_name: ICD (Intelligent Candidate Discovery)
+description: A 4-stage pipeline for parsing, filtering, embedding, and reranking candidates for an AI Engineer role using sentence transformers.
