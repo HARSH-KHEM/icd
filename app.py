@@ -30,7 +30,8 @@ if st.button("Run Ranker"):
         st.warning("Please upload a file or it will run on the default data/candidates.jsonl.gz if exists.")
         file_path = 'data/candidates.jsonl.gz'
     else:
-        with tempfile.NamedTemporaryFile(delete=False) as tmp:
+        suffix = '.gz' if uploaded_file.name.endswith('.gz') else '.jsonl'
+        with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
             tmp.write(uploaded_file.getvalue())
             file_path = tmp.name
 
